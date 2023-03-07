@@ -43,7 +43,8 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 * Observer le code du projet `todolist-debut-ex1`
 
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
-
+Le code ne suit pas une structure en couches clairement définie. Il ne dispose pas de couche métier ni de couche de persistance, ce qui rend son test et sa maintenance difficiles.
+Cependant, les fonctionnalitées sont bien séparé entre différentes page.
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
 
 *Cette règle est-elle facilement testable par un test unitaire ?*
