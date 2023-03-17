@@ -71,12 +71,19 @@ La connexion à PostgreSQL en utilisera le port 5432 de l'ordinateur local.
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
 
+todoItemRepository était null car il n'y avait pas le lien explicite de l'injection pour relier l'instance de la classe TodoListController avec le bon todoItemRepository.
+
+La meilleur façon de l'injecter est d'utiliser l'annotation @Autowired qui permet d'injecter automatiquement des dépendances dans les classes grâce à Spring.
+
 * Modifier le code en conséquence.
 @autowired
 
 
 * Tester vos endpoints avec un client REST.
 
+GET http://localhost:8080/todo => Status : 200 OK
+
+POST http://localhost:8080/todo => Status : 201 Created
 
 [NOTE]
 ====
