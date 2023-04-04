@@ -48,10 +48,9 @@ public class TodoListController {
 	// A compléter
 	@PostMapping("/todos")
 	public void ajouterItem(@RequestBody TodoItem item) {
-		// A compléter
-		//this.updateTodoItem.storeNewTodoItem(item);
 		this.setTodoItemsQuery.addTodoItem(item);
 	}
-	
+
+
 	
 }
