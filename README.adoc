@@ -140,7 +140,19 @@ _Temps estimé : 20 mins_
 
 * Implémenter (en junit) des TU sur la règle de gestion qui consiste à afficher `[LATE!]` dans la description d'un item en retard de plus de 24h.
 
+Tests unitaires dans le fichier TodolistApplicationTests.java
+
 *Quels types de tests devra-t-on écrire pour les adapteurs ?*
+
+Dans les types de tests on pourrait :
+
+-vérifier que la connexion a la base de données est fonctionnel
+
+-vérifier que l'on récupère bien les données
+
+-vérifier que les données que l'ont transmet soient bien transmise et prise en compte en cas de mise à jour tout en restant cohérentes avec les formats attendus
+
+-vérifier que les transferts d'informations soient performants, c'est-à-dire que le transfert supporte des grands volumes de données
 
 *S'il vous reste du temps, écrire quelques uns de ces types de test.*
 
