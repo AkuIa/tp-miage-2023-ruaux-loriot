@@ -39,7 +39,7 @@ public class TodoItemPersistenceAdapter implements LoadTodoItem,UpdateTodoItem {
 
 	@Override
 	public void storeNewTodoItem(TodoItem item) {
-
+		this.todoItemRepository.save(mapper.mapToTodoItemJpaEntity(item));
 	}
 
 	// A compléter

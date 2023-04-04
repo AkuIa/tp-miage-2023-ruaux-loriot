@@ -121,6 +121,11 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
 
 *Rappeler en quelques lignes les grands principes de l'architecture hexagonale.*
 
+L'objectif est d'avoir un coeur métier (domaine) isolé et indépendant du reste de l'application.
+Les adaptaters vont permettre de communiqué avec les infrastructures externes.
+Les ports et les adapters sont interconnectés par un mécanisme d'injection de dépendances ce qui permet d'éviter une dépendance lié à l'implémentation des adaptaters.
+Enfin cette organisation va permettre de faciliter les tests unitaires et va permettre à chaque couche d'avoir ses propres responsabilités.
+
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
 
 * prend un `TodoItem` au format JSON dans le body (voir exemple de contenu plus haut);
