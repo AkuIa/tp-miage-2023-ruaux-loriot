@@ -25,15 +25,15 @@ public class TodoListController {
 	
 	
 	private GetTodoItems getTodoItemsQuery;
-	private AddTodoItemService setTodoItemsQuery;
+	private AddTodoItemService addTodoItemsQuery;
 	// A compléter
 	
 	
 	@Inject
 	//A compléter
-	public TodoListController(GetTodoItems getTodoItemsQuery, AddTodoItemService setTodoItemsQuery) {
+	public TodoListController(GetTodoItems getTodoItemsQuery, AddTodoItemService addTodoItemsQuery) {
 		this.getTodoItemsQuery = getTodoItemsQuery;
-		this.setTodoItemsQuery = setTodoItemsQuery;
+		this.addTodoItemsQuery = addTodoItemsQuery;
 	}
 	
 	@GetMapping("/todos")
@@ -48,7 +48,7 @@ public class TodoListController {
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public void ajouterItem(@RequestBody TodoItem item) {
 		//this.todoItemRepository.save(item);
-		this.setTodoItemsQuery.addTodoItem(item);
+		this.addTodoItemsQuery.addTodoItem(item);
 	}
 
 
